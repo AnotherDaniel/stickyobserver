@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="stylesheet.css">
+    </head>
+    <body>
+        <main>
+            <div id="container">
+                <div class="sticky_sentinel"></div>
+
+                <section id="cover" class="bgimg-1"></section>
+
+                <div class="caption">
+                    <span class="sticky header">Title</span>
+                    <span class="scroll-down bounce-down"></span>
+                </div>
+
+                <section id="lorem" class="content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </section>
+                <div id="break" class="bgimg-2"></div>
+
+                <section id="lorem" class="content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </section>
+                <div id="break" class="bgimg-3"></div>
+
+                <section id="ipsum" class="content">
+                    <ul>
+                        <li>
+                            <a href="https://www.example1.de" title="Example link 1">Example link 1</a>
+                        </li>
+                        <li>
+                            <a href="https://www.example2.de" title="Example link 2">Example link 2</a>
+                        </li>
+                        <li>
+                            <a href="https://www.example3.de" title="Example link 3">Example link 3</a>
+                        </li>
+                    </ul>
+                </section>
+
+                <section id="break" class="bgimg-4"></section>
+                <div class="footer">
+                    <span class="footer">Footer</span>
+                </div>
+            </div>
+        </main>
+
+        <script>
+            (function () {
+                'use strict';
+
+                const options = {
+                    root: document.body,
+                    rootMargin: '0px',
+                    threshold: 0
+                }
+
+                function callback(entries, observer) {
+                    console.log(observer);
+
+                    entries.forEach(entry => {
+                        console.log(entry);
+                    });
+                }
+
+                let observer = new IntersectionObserver(callback, options);
+                observer.observe(document.querySelector('.sticky_sentinel'));
+            })();
+        </script>
+
+    </body>
+</html>
